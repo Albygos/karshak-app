@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karshak Shop – Organic. Local. Trusted.</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head><body>
+
+  <!-- Screen reader skip link -->
+  <a href="#catalog" class="skip-link">Skip to main content</a>
+
+  <!-- Mock mobile app frame centered on desktop -->
+  <div class="app-container">
+    
+    <!-- Top Fixed Dark Green Header Section (Organic Theme) -->
+    <header class="app-header">
+      
+      <!-- Row 1: Brand Logo and Coin Wallet side-by-side -->
+      <div class="brand-coin-row">
+        <h1 class="brand-logo" id="brand-title">Karshak <span class="logo-spices">Spices</span></h1>
+        
+        <div class="coin-badge" title="Use coins to bargain!" aria-label="Bargain coins balance: 250">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="coin-badge-svg" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M9 10h4.5a2.25 2.25 0 0 1 0 4.5H9M15 10H9v4.5h6"></path>
+          </svg>
+          <span id="header-coins-count" aria-live="polite">250</span>
+        </div>
+      </div>
+      
+      <!-- Row 2: Convenient Top Switcher segment -->
+      <div class="toggle-brand-row" role="group" aria-label="Choose Grower or Brand marketplace">
+        <button class="top-toggle-pill active" id="pill-growers" data-type="seller" aria-pressed="true" aria-label="Shop direct Grower products">
+          <svg class="pill-logo" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 12 12 22c10-10 5.52-20 0-20zm0 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6z"/>
+          </svg>
+          <span>Growers Direct</span>
+        </button>
+        <button class="top-toggle-pill" id="pill-brands" data-type="brand" aria-pressed="false" aria-label="Shop certified premium Brands">
+          <svg class="pill-logo" viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          </svg>
+          <span>Premium Brands</span>
+        </button>
+      </div>
+      
+      <!-- Row 3: Search input (100% width, voice mic) -->
+      <div class="search-row">
+        <div class="search-input-wrapper">
+          <svg class="icon-search" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="search-input" placeholder="Search cardamom, pepper, ginger, turmeric..." aria-label="Search Spices">
+          <svg class="icon-mic" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Voice search (Voice recognition)" role="button" tabindex="0">
+            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+            <path d="M19 10v1a7 7 0 0 1-14 0v-1"></path>
+            <line x1="12" y1="19" x2="12" y2="23"></line>
+            <line x1="8" y1="23" x2="16" y2="23"></line>
+          </svg>
+        </div>
+      </div>
+    </header>
+    
+    <!-- Scrollable content inside mobile viewport -->
+    <main class="scrollable-content" id="main-content">
+      
+      <!-- Home Screen (Active by Default) -->
+      <div class="app-screen active" id="screen-home" role="tabpanel" aria-labelledby="tab-home">
+        
+        <!-- Top category nav bar with circular outline containers -->
+        <nav class="categories-nav" aria-label="Quick Categories">
+          <div class="category-item active-category" data-category="all" role="button" tabindex="0" aria-label="For You selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+            </div>
+            <span>For You</span>
+            <div class="category-underline"></div>
+          </div>
+          
+          <div class="category-item" data-category="Whole Spices" role="button" tabindex="0" aria-label="Whole Spices selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle><path d="m10 15 5-3-5-3v6Z"/>
+              </svg>
+            </div>
+            <span>Whole Spices</span>
+          </div>
+          
+          <div class="category-item" data-category="Powders" role="button" tabindex="0" aria-label="Powders selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="3" width="14" height="18" rx="2" ry="2"></rect><line x1="9" y1="8" x2="15" y2="8"></line><line x1="9" y1="12" x2="15" y2="12"></line>
+              </svg>
+            </div>
+            <span>Powders</span>
+          </div>
+          
+          <div class="category-item" data-category="Herbs" role="button" tabindex="0" aria-label="Herbs selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 22c1.25-6.13 5.48-11 11-11h9v2c0 5.52-4.87 9.75-11 11H2z"></path>
+              </svg>
+            </div>
+            <span>Herbs</span>
+          </div>
+          
+          <div class="category-item" data-category="Seeds" role="button" tabindex="0" aria-label="Seeds selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22V12"></path><path d="M12 12c-4-4-9-2-9-2s4 5 9 2z"></path><path d="M12 12c4-4 9-2 9-2s-4 5-9 2z"></path>
+              </svg>
+            </div>
+            <span>Seeds</span>
+          </div>
+          
+          <div class="category-item" data-category="Extracts" role="button" tabindex="0" aria-label="Extracts selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2v4M8 6h8v12a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2V6z"></path>
+              </svg>
+            </div>
+            <span>Extracts</span>
+          </div>
+  
+          <div class="category-item" data-category="Combo Offers" role="button" tabindex="0" aria-label="Combo Offers selection">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="9" width="18" height="12" rx="2" ry="2"></rect><path d="M12 22V9M7.5 9a2.5 2.5 0 0 1 0-5H12M16.5 9a2.5 2.5 0 0 0 0-5H12"></path>
+              </svg>
+            </div>
+            <span>Combo Offers</span>
+          </div>
+        </nav>
+        
+        <!-- Hero Product Showcase Slider Banner -->
+        <section class="hero-banner">
+          <div class="hero-carousel" id="hero-carousel" aria-roledescription="carousel" aria-label="Featured Spices">
+            <div class="hero-slides-wrapper" id="hero-slides-wrapper">
+              
+              <!-- Slide 1 (Active) -->
+              <div class="hero-slide active" data-slide="0">
+                <div class="hero-card">
+                  <div class="hero-info">
+                    <span class="badge-coop">Co-op Fresh</span>
+                    <h3 class="hero-title">Tellicherry Pepper</h3>
+                    <p class="hero-desc">Premium bold & aromatic pepper direct from Wayanad gardens.</p>
+                    <span class="hero-price">From <strong>₹220</strong> / 250g</span>
+                    <button class="btn-shop-now" id="btn-hero-shop" aria-label="Shop Tellicherry Pepper Now">Shop Now →</button>
+                  </div>
+                  
+                  <div class="hero-image-wrapper">
+                    <img src="images/black_pepper_real.png" alt="Tellicherry Black Pepper corns">
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 2 -->
+              <div class="hero-slide" data-slide="1">
+                <div class="hero-card slide-card-gold">
+                  <div class="hero-info">
+                    <span class="badge-coop">Grower Direct</span>
+                    <h3 class="hero-title">Green Cardamom</h3>
+                    <p class="hero-desc">Shade-grown, hand-picked premium bold cardamom pods.</p>
+                    <span class="hero-price">From <strong>₹450</strong> / 100g</span>
+                    <button class="btn-shop-now" id="btn-hero-shop-cardamom" aria-label="Shop Organic Cardamom Now">Shop Now →</button>
+                  </div>
+                  
+                  <div class="hero-image-wrapper">
+                    <img src="images/cardamom_real.png" alt="Organic Green Cardamom pods">
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+            
+            <!-- Slider navigation dots -->
+            <div class="slider-dots">
+              <span class="dot active" data-slide="0" role="button" aria-label="Featured Slide 1"></span>
+              <span class="dot" data-slide="1" role="button" aria-label="Featured Slide 2"></span>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Horizontal Strip of Value Props -->
+        <section class="features-strip">
+          <div class="features-scroll-wrapper">
+            <!-- Farm Direct -->
+            <div class="feature-item">
+              <div class="f-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 14H17M14 6V2h4v4M8 6h7M3 10h18v4H3z"></path><circle cx="7" cy="18" r="3"></circle><circle cx="17" cy="18" r="3"></circle>
+                </svg>
+              </div>
+              <div class="f-text">
+                <strong>Farm Direct</strong>
+                <span>Direct growers to home</span>
+              </div>
+            </div>
+            <!-- 100% Organic -->
+            <div class="feature-item">
+              <div class="f-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 21 3c-1 4.5-2.5 6-7.1 11.8A7 7 0 0 1 11 20z"></path>
+                </svg>
+              </div>
+              <div class="f-text">
+                <strong>100% Organic</strong>
+                <span>Chemical-free farming</span>
+              </div>
+            </div>
+            <!-- Lab Tested -->
+            <div class="feature-item">
+              <div class="f-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h12M12 3v13M12 16a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM8.5 7h7"></path>
+                </svg>
+              </div>
+              <div class="f-text">
+                <strong>Lab Tested</strong>
+                <span>Purity & grade certified</span>
+              </div>
+            </div>
+            <!-- Secure Payment -->
+            <div class="feature-item">
+              <div class="f-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="f-text">
+                <strong>Secure Checkout</strong>
+                <span>Safe trusted gateways</span>
+              </div>
+            </div>
+            <!-- Easy Returns -->
+            <div class="feature-item">
+              <div class="f-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+                </svg>
+              </div>
+              <div class="f-text">
+                <strong>Hassle-Free</strong>
+                <span>Simple refund policies</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section: Shop by Category -->
+        <section class="section-horizontal-capsules">
+          <div class="section-title-row">
+            <h3>Shop by Category</h3>
+            <button class="btn-view-all-categories" id="link-categories-all" style="background:none; border:none; cursor:pointer;" aria-label="View all category cards">View All →</button>
+          </div>
+          
+          <div class="horizontal-capsules-scroll">
+            <!-- Card Pepper -->
+            <div class="capsule-card" data-category="Whole Spices" tabindex="0" role="button" aria-label="Pepper Category (12 Products)">
+              <div class="cap-img-circle">
+                <img src="images/black_pepper_real.png" alt="Black Pepper">
+              </div>
+              <strong>Pepper</strong>
+              <span>12 Products</span>
+            </div>
+            
+            <!-- Card Cardamom -->
+            <div class="capsule-card" data-category="Whole Spices" tabindex="0" role="button" aria-label="Cardamom Category (8 Products)">
+              <div class="cap-img-circle">
+                <img src="images/cardamom_real.png" alt="Cardamom">
+              </div>
+              <strong>Cardamom</strong>
+              <span>8 Products</span>
+            </div>
+            
+            <!-- Card Cumin -->
+            <div class="capsule-card" data-category="Seeds" tabindex="0" role="button" aria-label="Cumin Category (6 Products)">
+              <div class="cap-img-circle">
+                <img src="images/cumin_real.png" alt="Cumin">
+              </div>
+              <strong>Cumin</strong>
+              <span>6 Products</span>
+            </div>
+            
+            <!-- Card Cinnamon -->
+            <div class="capsule-card" data-category="Whole Spices" tabindex="0" role="button" aria-label="Cinnamon Category (5 Products)">
+              <div class="cap-img-circle">
+                <img src="images/cinnamon_real.png" alt="Cinnamon">
+              </div>
+              <strong>Cinnamon</strong>
+              <span>5 Products</span>
+            </div>
+            
+            <!-- Card Cloves -->
+            <div class="capsule-card" data-category="Whole Spices" tabindex="0" role="button" aria-label="Cloves Category (4 Products)">
+              <div class="cap-img-circle">
+                <img src="images/cloves_real.png" alt="Cloves">
+              </div>
+              <strong>Cloves</strong>
+              <span>4 Products</span>
+            </div>
+          </div>
+        </section>
+        
+        <!-- Section: Best Selling Products -->
+        <section class="section-best-sellers" id="catalog">
+          <div class="section-title-row">
+            <h3>Best Selling Products</h3>
+          </div>
+          
+          <!-- Grid of items, loaded dynamically in script.js -->
+          <div class="products-horizontal-scroll" id="products-grid">
+            <!-- Populated by script.js -->
+          </div>
+        </section>
+        
+        <!-- Bottom Social Trust / Stats Banner -->
+        <section class="trust-banner">
+          <div class="trust-stats-row">
+            <!-- stat 1 -->
+            <div class="trust-stat-box">
+              <div class="t-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 21 3c-1 4.5-2.5 6-7.1 11.8A7 7 0 0 1 11 20z"></path>
+                </svg>
+              </div>
+              <strong>Farm Direct</strong>
+              <span>100% Sourced Direct</span>
+            </div>
+            <!-- stat 2 -->
+            <div class="trust-stat-box">
+              <div class="t-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 11 2 2 4-4"></path>
+                </svg>
+              </div>
+              <strong>Lab Tested</strong>
+              <span>Purity & Grade Certified</span>
+            </div>
+            <!-- stat 3 -->
+            <div class="trust-stat-box">
+              <div class="t-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <strong>Secure Buy</strong>
+              <span>Trusted Checkout</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Category Tab Screen -->
+      <div class="app-screen" id="screen-categories" style="display: none;" role="tabpanel" aria-labelledby="tab-categories">
+        <div class="screen-header">
+          <h3>Spice Categories</h3>
+          <p>Browse through our hand-picked selections</p>
+        </div>
+        <div class="categories-grid-page">
+          <!-- Whole Spices -->
+          <div class="category-card-wide" data-category="Whole Spices" tabindex="0" role="button">
+            <div class="category-card-icon-wrapper">
+              <img src="images/cardamom_real.png" alt="Whole Spices Category" class="category-round-img">
+            </div>
+            <div class="category-card-info">
+              <h4>Whole Spices</h4>
+              <span>Cardamom, Pepper, Cloves, Cinnamon</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          
+          <!-- Powders -->
+          <div class="category-card-wide" data-category="Powders" tabindex="0" role="button">
+            <div class="category-card-icon-wrapper">
+              <img src="images/turmeric_real.png" alt="Ground Powders Category" class="category-round-img">
+            </div>
+            <div class="category-card-info">
+              <h4>Ground Powders</h4>
+              <span>Turmeric, Pepper, Cumin and Blend Powders</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          
+          <!-- Herbs -->
+          <div class="category-card-wide" data-category="Herbs" tabindex="0" role="button">
+            <div class="category-card-icon-wrapper">
+              <img src="images/cloves_real.png" alt="Organic Herbs Category" class="category-round-img">
+            </div>
+            <div class="category-card-info">
+              <h4>Organic Herbs</h4>
+              <span>Dried Leaves, Wild Herbs, Tea Blends</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          
+          <!-- Seeds -->
+          <div class="category-card-wide" data-category="Seeds" tabindex="0" role="button">
+            <div class="category-card-icon-wrapper">
+              <img src="images/cumin_real.png" alt="Culinary Seeds Category" class="category-round-img">
+            </div>
+            <div class="category-card-info">
+              <h4>Culinary Seeds</h4>
+              <span>Cumin Seeds, Mustard, Fenugreek</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Orders Tab Screen -->
+      <div class="app-screen" id="screen-orders" style="display: none;" role="tabpanel" aria-labelledby="tab-orders">
+        <div class="screen-header">
+          <h3>Your Orders</h3>
+          <p>Track shipments and active discount bargains</p>
+        </div>
+        <div class="orders-list-page">
+          <!-- Active Order -->
+          <div class="order-card active">
+            <div class="order-card-header">
+              <span class="status-badge status-dispatched">Dispatched</span>
+              <span class="order-date">Today, 2:30 PM</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-item-row">
+                <img src="images/cardamom_real.png" alt="Organic Cardamom" class="order-item-img">
+                <div class="order-item-details">
+                  <h4>Organic Cardamom</h4>
+                  <span>Qty: 1 • Seller: Joy's Garden (100g)</span>
+                  <div class="order-price-savings">
+                    <span class="order-price">₹360.00</span>
+                    <span class="order-savings-tag">Saved 20% via Bargain</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-card-footer">
+              <span>Order ID: #KS-9082</span>
+              <button class="btn-track-order" aria-label="Track Shipment for Order #KS-9082">Track Shipments</button>
+            </div>
+          </div>
+          
+          <!-- Past Order -->
+          <div class="order-card">
+            <div class="order-card-header">
+              <span class="status-badge status-delivered">Delivered</span>
+              <span class="order-date">June 08, 2026</span>
+            </div>
+            <div class="order-card-body">
+              <div class="order-item-row">
+                <img src="images/black_pepper_real.png" alt="Black Pepper" class="order-item-img">
+                <div class="order-item-details">
+                  <h4>Black Pepper</h4>
+                  <span>Qty: 2 • Seller: Growers Co-op (250g)</span>
+                  <div class="order-price-savings">
+                    <span class="order-price">₹440.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="order-card-footer">
+              <span>Order ID: #KS-8721</span>
+              <button class="btn-invoice" aria-label="Download Invoice for Order #KS-8721">Download Invoice</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Account Tab Screen -->
+      <div class="app-screen" id="screen-account" style="display: none;" role="tabpanel" aria-labelledby="tab-account">
+        <div class="screen-header">
+          <h3>Your Profile</h3>
+          <p>Manage coin wallet, address book and deals</p>
+        </div>
+        
+        <!-- Profile info -->
+        <div class="account-profile-card">
+          <div class="profile-avatar-circle">AM</div>
+          <div class="profile-details">
+            <h4>Albin Moozhiyankal</h4>
+            <span>Gold Member • Wayanad, Wayanad</span>
+          </div>
+        </div>
+        
+        <!-- Stats widget -->
+        <div class="account-stats-row">
+          <div class="account-stat-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--accent-gold);">
+              <circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M9 10h4.5a2.25 2.25 0 0 1 0 4.5H9"></path>
+            </svg>
+            <strong id="account-coins-count">250</strong>
+            <span>Active Coins</span>
+          </div>
+          <div class="account-stat-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--saffron-orange);">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="m9 11 2 2 4-4"></path>
+            </svg>
+            <strong>14</strong>
+            <span>Bargains Closed</span>
+          </div>
+          <div class="account-stat-box">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--btn-green);">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <strong>₹1,240</strong>
+            <span>Deals Savings</span>
+          </div>
+        </div>
+        
+        <!-- Account routes list -->
+        <div class="account-settings-list">
+          <div class="settings-item" id="btn-account-address" role="button" tabindex="0" aria-label="Manage address book">
+            <div class="settings-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="settings-text">
+              <h4>Manage Address Book</h4>
+              <span>Edit Home and Office delivery routes</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="chevron-arrow">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          
+          <div class="settings-item" role="button" tabindex="0" aria-label="View coin transaction history">
+            <div class="settings-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle><path d="M12 8v8M9 10h4.5a2.25 2.25 0 0 1 0 4.5H9"></path>
+              </svg>
+            </div>
+            <div class="settings-text">
+              <h4>Bargaining Coin Wallet</h4>
+              <span>Check coin transactions and limits</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="chevron-arrow">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          
+          <div class="settings-item" role="button" tabindex="0" aria-label="Support & FAQs">
+            <div class="settings-icon">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+            </div>
+            <div class="settings-text">
+              <h4>Help Support Desk</h4>
+              <span>Grower helpline support channels</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="chevron-arrow">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    
+    <!-- Fixed Bottom Navigation Tab Bar -->
+    <nav class="app-footer" role="tablist" aria-label="App Navigation Tabs">
+      <button class="footer-tab active" id="tab-home" role="tab" aria-selected="true" aria-controls="screen-home" tabindex="0">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline>
+        </svg>
+        <span>Home</span>
+      </button>
+      
+      <button class="footer-tab" id="tab-categories" role="tab" aria-selected="false" aria-controls="screen-categories" tabindex="0">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect>
+        </svg>
+        <span>Categories</span>
+      </button>
+      
+      <button class="footer-tab" id="tab-orders" role="tab" aria-selected="false" aria-controls="screen-orders" tabindex="0">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+        <span>Orders</span>
+      </button>
+      
+      <button class="footer-tab" id="tab-account" role="tab" aria-selected="false" aria-controls="screen-account" tabindex="0">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>
+        </svg>
+        <span>Account</span>
+      </button>
+      
+      <button class="footer-tab" id="tab-cart" role="button" aria-label="Open Basket, contains 0 items" tabindex="0">
+        <div class="footer-cart-wrapper">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-badge" id="mobile-cart-badge" aria-live="polite">0</span>
+        </div>
+        <span>Cart</span>
+      </button>
+    </nav>
+
+    <!-- Interactive Bargaining Modal Overlay -->
+    <div class="modal-overlay" id="bargain-modal" role="dialog" aria-modal="true" aria-labelledby="bargain-modal-title">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <div class="seller-profile">
+            <span class="seller-avatar" id="bargain-seller-avatar" aria-hidden="true">JD</span>
+            <div class="seller-meta">
+              <h4 id="bargain-seller-name">Joy's Garden</h4>
+              <span class="seller-rating" id="bargain-seller-rating">4.9 ★ (Valad)</span>
+            </div>
+          </div>
+          <button class="close-modal-btn" id="close-bargain-modal" aria-label="Close Bargaining modal">&times;</button>
+        </div>
+        
+        <!-- Modal Body -->
+        <div class="bargain-body">
+          <!-- Active Product Info -->
+          <div class="modal-product-card">
+            <div class="modal-product-img-wrapper">
+              <img src="images/cardamom_real.png" alt="Product" id="bargain-product-image">
+            </div>
+            <div class="modal-product-info">
+              <span class="modal-product-badge" id="bargain-product-badge">LOCAL SELLER</span>
+              <h4 class="modal-product-name" id="bargain-product-name" id="bargain-modal-title">Organic Cardamom</h4>
+              <div class="modal-product-price-row">
+                <span class="price-original-cross" id="bargain-original-price-cross">₹450</span>
+                <span class="price-current-value">List Price: <strong id="bargain-original-price">₹450</strong> <span class="unit-desc">per 100g</span></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bargaining Chat Log -->
+          <div class="bargain-chat-wrapper">
+            <div class="bargain-chat" id="bargain-chat-messages" role="log" aria-live="polite">
+              <!-- Dynamically Populated Chat -->
+            </div>
+            <!-- Typing dots indicator -->
+            <div class="typing-indicator" id="bargain-typing" style="display: none;" aria-label="Seller is typing...">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer Controls -->
+        <div class="modal-footer">
+          <div class="bargain-controls">
+            
+            <!-- Coins Cost Alert -->
+            <div class="coin-cost-alert">
+              <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" fill="#D69E2E"/>
+                <path d="M11 6l-3 6h4l-1 6 5-7h-4l1-5z" fill="#FFF"/>
+              </svg>
+              <span>Each offer costs <strong>10 coins</strong>. Balance: <strong id="user-coins-modal">250</strong></span>
+            </div>
+
+            <!-- Slider pricing indicators -->
+            <div class="slider-row">
+              <span class="slider-label">Your Proposed Offer:</span>
+              <div class="price-math-display">
+                <span class="slider-value" id="bargain-offer-display">₹360</span>
+                <span class="discount-percentage" id="bargain-pct-display">(-20% Off)</span>
+              </div>
+            </div>
+            
+            <!-- Range slider -->
+            <div class="slider-container">
+              <input type="range" class="bargain-slider" id="bargain-slider" min="200" max="450" step="5" value="360" aria-label="Offer amount slider">
+              <div class="slider-bounds">
+                <span class="bound-min" id="slider-min-label">₹225 (50% Off)</span>
+                <span class="bound-max" id="slider-max-label">₹450 (Original)</span>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div class="bargain-actions">
+              <button class="btn-secondary" id="btn-walk-away" aria-label="Decline and Walk Away from deal">Walk Away</button>
+              <button class="btn-primary" id="btn-submit-offer" aria-label="Send proposed price offer">Send Offer</button>
+              <button class="btn-accent" id="btn-accept-deal" style="display: none;" aria-label="Accept counter offer proposed by seller">Accept Counter-Offer</button>
+              <button class="btn-success" id="btn-add-discounted-cart" style="display: none;" aria-label="Add item to cart at bargained price">Add to Cart at Discount</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sliding Cart Drawer (Right Side overlay) -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+      <div class="cart-drawer">
+        <div class="cart-drawer-header">
+          <div class="cart-title-row">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <h3 id="cart-drawer-title">Your Basket</h3>
+            <span class="cart-drawer-count" id="cart-drawer-count" aria-live="polite">0 items</span>
+          </div>
+          <button class="close-cart-btn" id="btn-close-cart" aria-label="Close Shopping Basket">&times;</button>
+        </div>
+
+        <!-- Cart items list -->
+        <div class="cart-items-container" id="cart-items-list" role="list">
+          <!-- Dynamic Items -->
+          <div class="empty-cart-state">
+            <div class="empty-cart-icon">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--text-light)">
+                <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+            </div>
+            <p>Your basket is empty!</p>
+            <span class="empty-cart-sub">Add spices or start bargaining to get amazing discounts.</span>
+          </div>
+        </div>
+
+        <!-- Cart Summary Footer -->
+        <div class="cart-drawer-footer">
+          <div class="totals-breakdown">
+            <div class="totals-row">
+              <span class="total-label">Basket Subtotal</span>
+              <span class="total-value" id="cart-subtotal">₹0.00</span>
+            </div>
+            <div class="totals-row savings-row" id="cart-savings-row" style="display: none;">
+              <span class="total-label">🎉 Total Bargain Savings</span>
+              <span class="total-value text-gold" id="cart-savings">-₹0.00</span>
+            </div>
+            <div class="totals-row">
+              <span class="total-label">Delivery & Handling</span>
+              <span class="total-value" id="cart-delivery">₹40.00</span>
+            </div>
+            <div class="totals-row grand-total-row">
+              <span class="total-label">Grand Total</span>
+              <span class="total-value" id="cart-total">₹40.00</span>
+            </div>
+          </div>
+
+          <button class="btn-checkout" id="btn-checkout" aria-label="Proceed to checkout purchase">
+            <span>Proceed to Checkout</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Address Selector Dialog (Modal) -->
+    <div class="modal-overlay" id="address-modal" role="dialog" aria-modal="true" aria-labelledby="address-modal-title">
+      <div class="modal-content address-modal-content">
+        <div class="modal-header">
+          <h3 id="address-modal-title">Select Delivery Address</h3>
+          <button class="close-modal-btn" id="close-address-modal" aria-label="Close Address selector modal">&times;</button>
+        </div>
+        <div class="modal-body address-list" role="radiogroup" aria-label="Delivery Addresses">
+          <div class="address-card active" data-addr="Home: Wayanad, Kerala" tabindex="0" role="radio" aria-checked="true" aria-label="Home Address: Moozhiyankal H, Valad PO, Wayanad, Kerala - 670731">
+            <div class="address-card-header">
+              <span class="address-badge">HOME</span>
+              <strong class="address-title">Moozhiyankal H, Valad</strong>
+            </div>
+            <p class="address-details">Valad PO, Valat, Wayanad, Kerala - 670731</p>
+          </div>
+          <div class="address-card" data-addr="Office: Kalpetta, Wayanad" tabindex="0" role="radio" aria-checked="false" aria-label="Office Address: Growers Warehouse District, NH-766 Bypass, Kalpetta, Wayanad, Kerala - 673121">
+            <div class="address-card-header">
+              <span class="address-badge">OFFICE</span>
+              <strong class="address-title">Growers Warehouse District</strong>
+            </div>
+            <p class="address-details">NH-766 Bypass, Kalpetta, Wayanad, Kerala - 673121</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Checkout Success Dialog -->
+    <div class="modal-overlay" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="success-modal-title">
+      <div class="modal-content success-modal-content">
+        <div class="success-icon-wrapper" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="var(--btn-green)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline>
+          </svg>
+        </div>
+        <h2 id="success-modal-title">Order Placed Successfully!</h2>
+        <p>Your premium spices are packed and dispatched. You successfully saved <strong id="success-savings-display">₹0.00</strong> through active bargaining!</p>
+        <p class="earned-coins" aria-live="polite">+50 Coins added to your balance for successful purchase!</p>
+        <button class="btn-primary" id="btn-success-close" aria-label="Close dialog and shop more spices">Shop More Spices</button>
+      </div>
+    </div>
+
+    <!-- Floating Toast Notification System Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

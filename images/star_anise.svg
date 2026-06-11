@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <rect width="200" height="200" fill="#EFEBE9" rx="20"/>
+  <g transform="translate(100, 100)">
+    <!-- Point 0 -->
+    <g transform="rotate(0)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#5D4037" stroke="#3E2723" stroke-width="1.5"/>
+      <!-- Seed pocket opening -->
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <!-- Seed inside -->
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 1 -->
+    <g transform="rotate(45)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#6D4C41" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 2 -->
+    <g transform="rotate(90)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#5D4037" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 3 -->
+    <g transform="rotate(135)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#6D4C41" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 4 -->
+    <g transform="rotate(180)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#5D4037" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 5 -->
+    <g transform="rotate(225)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#6D4C41" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 6 -->
+    <g transform="rotate(270)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#5D4037" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Point 7 -->
+    <g transform="rotate(315)">
+      <path d="M0,0 C-10,-10 -12,-35 0,-45 C12,-35 10,-10 0,0" fill="#6D4C41" stroke="#3E2723" stroke-width="1.5"/>
+      <path d="M-4,-20 C-4,-35 4,-35 4,-20 Z" fill="#D7CCC8" stroke="#3E2723" stroke-width="1"/>
+      <ellipse cx="0" cy="-25" rx="3" ry="5" fill="#FFB300" stroke="#FF6F00" stroke-width="0.5"/>
+    </g>
+    <!-- Center woody core -->
+    <circle cx="0" cy="0" r="12" fill="#4E342E" stroke="#3E2723" stroke-width="1.5"/>
+    <path d="M-8,-4 C-4,-8 4,-8 8,-4 C4,8 -4,8 -8,-4 Z" fill="#3E2723" opacity="0.3"/>
+  </g>
+</svg>

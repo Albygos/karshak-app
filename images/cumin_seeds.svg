@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <rect width="400" height="300" fill="#FBF9F6" rx="20"/>
+  <!-- Background cloth/linen -->
+  <path d="M50,220 L350,220 L320,280 L80,280 Z" fill="#EFEBE9" opacity="0.6"/>
+  <!-- Leaves -->
+  <g transform="translate(110, 205) rotate(-20)">
+    <path d="M0,0 C20,-20 50,-10 60,10 C40,20 10,10 0,0 Z" fill="#2E7D32" stroke="#1B5E20" stroke-width="1.5"/>
+    <path d="M0,0 Q30,-5 60,10" fill="none" stroke="#1B5E20" stroke-width="1"/>
+  </g>
+  <!-- Wooden Bowl -->
+  <ellipse cx="200" cy="170" rx="110" ry="70" fill="#8D6E63" stroke="#5D4037" stroke-width="6"/>
+  <ellipse cx="200" cy="160" rx="98" ry="54" fill="#5D4037"/>
+  <ellipse cx="200" cy="154" rx="94" ry="46" fill="#3E2723"/>
+  <!-- Cumin Seeds pile inside bowl -->
+  <g fill="#A07855" stroke="#5D4037" stroke-width="0.5">
+    <!-- Row of seed shapes (ellipses) -->
+    <ellipse cx="150" cy="140" rx="12" ry="6" transform="rotate(15 150 140)"/>
+    <ellipse cx="170" cy="130" rx="10" ry="5" transform="rotate(-10 170 130)" fill="#8C6239"/>
+    <ellipse cx="190" cy="125" rx="13" ry="6.5" transform="rotate(35 190 125)" fill="#7B522E"/>
+    <ellipse cx="210" cy="132" rx="11" ry="5.5" transform="rotate(-25 210 132)" fill="#8C6239"/>
+    <ellipse cx="230" cy="138" rx="12" ry="6" transform="rotate(20 230 138)"/>
+    
+    <ellipse cx="140" cy="155" rx="11" ry="5.5" transform="rotate(-5 140 155)" fill="#8C6239"/>
+    <ellipse cx="160" cy="150" rx="12" ry="6" transform="rotate(45 160 150)"/>
+    <ellipse cx="180" cy="142" rx="10" ry="5" transform="rotate(-15 180 142)" fill="#7B522E"/>
+    <ellipse cx="200" cy="138" rx="12" ry="6" transform="rotate(10 200 138)" fill="#8C6239"/>
+    <ellipse cx="220" cy="145" rx="11" ry="5.5" transform="rotate(-30 220 145)"/>
+    <ellipse cx="240" cy="150" rx="10" ry="5" transform="rotate(25 240 150)" fill="#7B522E"/>
+    <ellipse cx="260" cy="158" rx="11" ry="5.5" transform="rotate(-10 260 158)"/>
+    
+    <ellipse cx="130" cy="170" rx="10" ry="5" transform="rotate(30 130 170)" fill="#7B522E"/>
+    <ellipse cx="150" cy="165" rx="12" ry="6" transform="rotate(-20 150 165)"/>
+    <ellipse cx="170" cy="160" rx="11" ry="5.5" transform="rotate(15 170 160)" fill="#8C6239"/>
+    <ellipse cx="190" cy="154" rx="13" ry="6.5" transform="rotate(-5 190 154)" fill="#7B522E"/>
+    <ellipse cx="210" cy="156" rx="11" ry="5.5" transform="rotate(40 210 156)"/>
+    <ellipse cx="230" cy="162" rx="12" ry="6" transform="rotate(-15 230 162)" fill="#8C6239"/>
+    <ellipse cx="250" cy="168" rx="11" ry="5.5" transform="rotate(10 250 168)"/>
+    
+    <!-- Top pile layer -->
+    <ellipse cx="175" cy="130" rx="11" ry="5.5" transform="rotate(5 175 130)" fill="#7B522E"/>
+    <ellipse cx="195" cy="120" rx="12" ry="6" transform="rotate(-15 195 120)" fill="#6A4222"/>
+    <ellipse cx="215" cy="126" rx="10" ry="5" transform="rotate(25 215 126)" fill="#8C6239"/>
+    <ellipse cx="185" cy="142" rx="12" ry="6" transform="rotate(-35 185 142)" fill="#6A4222"/>
+    <ellipse cx="205" cy="135" rx="11" ry="5.5" transform="rotate(15 205 135)" fill="#7B522E"/>
+  </g>
+</svg>
